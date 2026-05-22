@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Web Form</title>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <form id="webForm">
+        <h2>Input Your Information</h2>
+        <div class="container">
+          <div class="field">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="FirstName" required />
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="LastName" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required />
+        </div>
+        <div class="dropArea">
+          <div id="dropArea_content">
+            <svg
+              class="drop-zone__icon"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <p class="drag">
+              Drag your Files Here or
+              <span style="color: blueviolet">Browse</span>
+            </p>
+            <p class="type">PDF,PNG,JPG upto 5MB</p>
+          </div>
+          <input
+            type="file"
+            id="dropInput"
+            style="display: none"
+            accept=".pdf, .png, .jpg, .jpeg"
+          />
+        </div>
+        <div id="btn-container">
+          <button type="submit" id="submit">Submit</button>
+          <button type="button" onclick="clearForm()" id="clear">
+            Clear Form
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="response">
+      <button id="response_btn" class="responsebtn active">View Response</button>
+      <button id="refresh_btn">Refresh Response</button>
+      <table id="response_table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>File Name</th>
+            <th>Mime Type</th>
+            <th>File Data</th>
+          </tr>
+        </thead>
+        <tbody id="response_body">
+
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
