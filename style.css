@@ -120,6 +120,7 @@ table, th, td {
     overflow: auto;
     border:1px solid #000000;
     padding:0;
+    margin-bottom:50px;
 }
 .responsebtn.active~#response_table,.responsebtn.active~#refresh_btn{
     display:block;
