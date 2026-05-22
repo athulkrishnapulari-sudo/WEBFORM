@@ -128,7 +128,7 @@ form.addEventListener("submit", async (e) => {
     });
 
 
-    // UI Reset
+
     form.reset();
     dropArea.innerHTML = initialDropAreaHTML;
     dropInput.value = "";
@@ -194,7 +194,7 @@ async function retrieveSheetData() {
       }
     });
 
-    // Populate the response table in the DOM
+
     const responseBody = document.getElementById("response_body");
     if (responseBody) {
       responseBody.innerHTML = ""; // clear existing rows
@@ -214,7 +214,7 @@ async function retrieveSheetData() {
         tr.appendChild(makeCell(row.FileName || ""));
         tr.appendChild(makeCell(row.MIMEType || ""));
 
-        // Show a shortened preview of FileData (if present)
+
         const filePreview = row.FileData
           ? (row.FileData.length > 100 ? row.FileData.substring(0, 100) + "..." : row.FileData)
           : "";
