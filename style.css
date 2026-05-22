@@ -134,3 +134,81 @@ table, th, td {
     color:white;
     display:none;
 }
+
+
+
+
+
+@media (max-width: 600px) {
+    #main-container {
+        height: auto;
+        padding: 20px 10px;
+        align-items: flex-start;
+    }
+
+    form {
+        padding: 20px;
+        width: 100%;
+        margin: 0 8px;
+    }
+
+    h2 {
+        margin: 10px 0 20px 0;
+        font-size: 18px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #submit, #clear {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .dropArea {
+        padding: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dropArea_content svg {
+        width: 44px;
+        height: 44px;
+    }
+
+    #response_btn {
+        width: 80%;
+        max-width: 480px;
+        box-sizing: border-box;
+    }
+
+    #response_table {
+        width: 95%;
+        overflow-x: auto;
+    }
+
+    table, th, td {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    #refresh_btn {
+        display: block;
+        width: 70%;
+        margin: 12px 0;
+    }
+}
+
